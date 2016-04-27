@@ -1,0 +1,22 @@
+[user]
+	name = ionian
+	email = mike@pactv.com
+[color]
+    ui = true
+[color "branch"]
+    current = green bold
+    remote = red bold
+[color "diff"]
+    meta = yellow
+    frag = cyan bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = green bold
+    changed = red bold
+    untracked = red bold
+[alias]
+    l = log --pretty=format:'%C(yellow)%h%C(magenta)%d%Creset %s %C(cyan)%cN% C(blue)(%cr)%Creset' --graph --use-mailmap
+    s = status -sb
+[push]
+    default = simple
