@@ -3,16 +3,23 @@
 # ...even if they are in subdirectories
 !*/
 
-# But not these files/directories...
 
+# But not these files/directories...
 !.gitignore
 !.xinitrc
 !.Xresources
 !.bashrc
 !.vimrc
 !.vim
+!.vim/*
+!.vim/*/*
+!.vim/*/*/*
+!.vim/*/*/*/*
+!.vim/*/*/*/*/*
+!.vim/*/*/*/*/*/*
 !.gitconfig
 !.dir_colors
 !.fonts
 !.config
 !.netrwhist
+

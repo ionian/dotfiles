@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/mike/temp123/.git'
+let g:netrw_dirhist_2='/home/mike/builds/italc/italc/ima'
+let g:netrw_dirhist_3='/home/mike/builds/italc/italc/lib/include/Configuration'
+let g:netrw_dirhist_4='/home/mike/archives'
+let g:netrw_dirhist_5='/home/mike/archives/vim-shawnbiddle'
+let g:netrw_dirhist_6='/usr/lib/python3.5'
