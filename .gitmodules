@@ -1,3 +1,9 @@
 [submodule "/home/mike/dotfiles/.vim/bundle/nerd_tree.git"]
 	path = /home/mike/dotfiles/.vim/bundle/nerd_tree.git
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/easymotion.git"]
+	path = .vim/bundle/easymotion.git
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule ".vim/bundle/powerline.git"]
+	path = .vim/bundle/powerline.git
+	url = https://github.com/Lokaltog/vim-powerline.git
