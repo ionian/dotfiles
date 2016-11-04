@@ -23,4 +23,7 @@
 !.config
 !.netrwhist
 !.colors
+!.colors/*
+!.colors/*/*
+!.colors/*/*
 
