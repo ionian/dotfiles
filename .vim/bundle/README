@@ -1,0 +1,5 @@
+Create Submodules in this directory
+
+git submodule add https://github.com/user/repository plugin_name.git
+git submodule init
+git submodule update
