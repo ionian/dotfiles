@@ -7,3 +7,15 @@
 [submodule ".vim/bundle/powerline.git"]
 	path = .vim/bundle/powerline.git
 	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "nerdtree.git"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "nerdtree.git.git"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/nerdtree.git"]
+	path = .vim/bundle/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
