@@ -23,26 +23,26 @@ chatnets = {
 };
 
 # Channels I hang out in a lot.  Change these to your own.
-channels = (
-  { name = "#lobby"; chatnet = "EsperNet"; autojoin = "No"; },
-  { name = "#freenode"; chatnet = "Freenode"; autojoin = "No"; },
-  { name = "#irssi"; chatnet = "Freenode"; autojoin = "No"; },
-  { name = "#gamesurge"; chatnet = "GameSurge"; autojoin = "No"; },
-  { name = "#irssi"; chatnet = "IRCNet"; autojoin = "No"; },
-  { name = "#ircsource"; chatnet = "IRCSource"; autojoin = "No"; },
-  { name = "#netfuze"; chatnet = "NetFuze"; autojoin = "No"; },
-  { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
-  { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
-  { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#debian"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#fsc"; chatnet = "rizon"; autojoin = "yes"; },
-  { name = "#css"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "##javascript"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#jquery"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#laravel"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#mysql"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "##php"; chatnet = "freenode"; autojoin = "yes"; }
-);
+channels = {
+   name = "#lobby"; chatnet = "EsperNet"; autojoin = "No";
+   name = "#freenode"; chatnet = "Freenode"; autojoin = "No";
+   name = "#irssi"; chatnet = "Freenode"; autojoin = "No";
+   name = "#gamesurge"; chatnet = "GameSurge"; autojoin = "No";
+   name = "#irssi"; chatnet = "IRCNet"; autojoin = "No";
+   name = "#ircsource"; chatnet = "IRCSource"; autojoin = "No";
+   name = "#netfuze"; chatnet = "NetFuze"; autojoin = "No";
+   name = "#oftc"; chatnet = "OFTC"; autojoin = "No";
+   name = "silc"; chatnet = "SILC"; autojoin = "No";
+   name = "#archlinux"; chatnet = "freenode"; autojoin = "yes";
+   name = "#debian"; chatnet = "freenode"; autojoin = "yes";
+   name = "#fsc"; chatnet = "rizon"; autojoin = "yes";
+   name = "#css"; chatnet = "freenode"; autojoin = "yes";
+   name = "##javascript"; chatnet = "freenode"; autojoin = "yes";
+   name = "#jquery"; chatnet = "freenode"; autojoin = "yes";
+   name = "#laravel"; chatnet = "freenode"; autojoin = "yes";
+   name = "#mysql"; chatnet = "freenode"; autojoin = "yes";
+   name = "##php"; chatnet = "freenode"; autojoin = "yes"; 
+};
 
 aliases = {
   ATAG = "WINDOW SERVER";
