@@ -1,5 +1,7 @@
 # Ignore everything
 *
+.vim/.netrwhist
+
 # ...even if they are in subdirectories
 !*/
 
