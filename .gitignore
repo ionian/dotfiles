@@ -10,6 +10,7 @@
 !.gitignore
 !dotbot
 !install.conf.yaml
+!install
 !.xinitrc
 !.Xresources
 !.bashrc
