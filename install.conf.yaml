@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.Xresources: .Xresources
+    ~/.bashrc: .bashrc
+    ~/.colors: .colors
+    ~/.dir_colors: .dir_colors
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore: .gitignore
+    ~/.gitmodules: .gitmodules
+    ~/.vimrc: .vimrc
+    ~/.vim: .vim
+    ~/.xinitrc: .xinitrc
+
+- shell:
+        - [git submodule update --init --recursive, Installing submodules]
