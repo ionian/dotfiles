@@ -38,14 +38,14 @@
      setxkbmap -option caps:swapescape
 
 #     # compose key
-#     setxkbmap -option compose:ralt
+     setxkbmap -option compose:ralt
 
  # add font paths
 xset fp default
- [[ -d /usr/share/fonts/local ]] && xset +fp /usr/share/fonts/local
- [[ -d /usr/share/fonts/OTF ]] && xset +fp /usr/share/fonts/OTF
- [[ -d $HOME/.local/share/fonts ]] && xset +fp $HOME/.local/share/fonts
- [[ -d $HOME/.local/share/fonts/misc ]] && xset +fp $HOME/.local/share/fonts/misc
+# [[ -d /usr/share/fonts/local ]] && xset +fp /usr/share/fonts/local
+# [[ -d /usr/share/fonts/OTF ]] && xset +fp /usr/share/fonts/OTF
+# [[ -d $HOME/.local/share/fonts ]] && xset +fp $HOME/.local/share/fonts
+# [[ -d $HOME/.local/share/fonts/misc ]] && xset +fp $HOME/.local/share/fonts/misc
 
 xset fp rehash
 
