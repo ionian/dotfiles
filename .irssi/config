@@ -17,7 +17,6 @@ servers = (
 chatnets = {
   Freenode = {
     type = "IRC";
-#Insert below here the LP sourced nick and autosendcmd lines
          nick = "locrian9";
          autosendcmd = "/msg nickserv identify <PASSWORD>";
   };
@@ -299,7 +298,6 @@ statusbar = {
   };
 };
 settings = {
-#Insert below here the LP sourced user_name and nick
       core = { real_name = "Unknown"; user_name = "mike"; nick = "locrian9"; };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
