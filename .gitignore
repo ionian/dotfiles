@@ -23,6 +23,7 @@
 !.vim/*/*/*/*/*
 !.vim/*/*/*/*/*/*
 !.gitconfig
+!.irssi/*
 !.dir_colors
 !.fonts
 !.config
