@@ -33,7 +33,7 @@ alias ls="ls --color=auto"
 alias anki="anki --base=${HOME}/pgms/anki/Documents/Anki"
 
 alias ls='ls --color=auto'
-alias ll='ls -AFlh --group-directories-first'
+alias ll='ls -AFlh --group-directories-first --time-style=+%F'
 
 function ssh_alias() {
     ssh $@;
