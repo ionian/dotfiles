@@ -5,7 +5,6 @@
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: ''
     ~/.Xresources: .Xresources
     ~/.bashrc: .bashrc
     ~/.colors: .colors
