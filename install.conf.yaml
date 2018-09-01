@@ -12,6 +12,7 @@
     ~/.gitconfig: .gitconfig
     ~/.gitignore: .gitignore
     ~/.gitmodules: .gitmodules
+    ~/.irssi/config: .irssi/config
     ~/.vimrc: .vimrc
     ~/.vim: .vim
     ~/.xinitrc: .xinitrc
