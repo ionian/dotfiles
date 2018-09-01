@@ -17,8 +17,8 @@ servers = (
 chatnets = {
   Freenode = {
     type = "IRC";
-         nick = "locrian9";
-         autosendcmd = "/msg nickserv identify <PASSWORD>";
+    nick = "locrian9";
+    autosendcmd = "/msg nickserv identify <PASSWORD>";
   };
   Ubuntu = { type = "IRC"; };
 };
@@ -35,7 +35,7 @@ channels = (
   { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
   { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
   { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#debian"; chatnet= "freenode"; autojoin = "yes"; },
+  { name = "#debian"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#fsc"; chatnet = "rizon"; autojoin = "yes"; },
   { name = "#css"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "##javascript"; chatnet = "freenode"; autojoin = "yes"; },
@@ -43,6 +43,10 @@ channels = (
   { name = "#laravel"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#mysql"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "##php"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#docker"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#chef"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#jenkins"; chatnet = "freenode"; autojoin = "yes"; }
+
 );
 
 aliases = {
@@ -298,10 +302,9 @@ statusbar = {
   };
 };
 settings = {
-      core = { real_name = "Unknown"; user_name = "mike"; nick = "locrian9"; };
+  core = { real_name = "Unknown"; user_name = "mike"; nick = "locrian9"; };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
-    bell_beeps = "yes";
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
   };
 };
