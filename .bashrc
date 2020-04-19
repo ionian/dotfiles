@@ -33,7 +33,7 @@ alias ls="ls --color=auto"
 alias anki="anki --base=${HOME}/pgms/anki/Documents/Anki"
 
 alias ls='ls --color=auto'
-alias ll='ls -AFlh --group-directories-first --time-style=+%F'
+alias ll='ls -AFlh --group-directories-first --time-style="+%Y-%m-%d %H:%M:%S"'
 
 function ssh_alias() {
     ssh $@;
@@ -42,8 +42,16 @@ function ssh_alias() {
 
 alias ssh=ssh_alias
 
+#  #----------------------
+#  # PasteBins
+#  #----------------------
+
 pb () {
-  curl -F "c=@${1:--}" https://ptpb.pw/
+  curl -F'file=@yourfile.png' https://0x0.st
+}
+
+pb () {
+  curl -F'file=@${1:--}' https://0x0.st
 }
 
 #pb () {
@@ -52,6 +60,13 @@ pb () {
 
 
 #  #----------------------
+#  # History
+#  #----------------------
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+
+  #----------------------
 #  # Global Variables
 #  #----------------------
 
