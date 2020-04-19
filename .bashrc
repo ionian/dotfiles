@@ -42,6 +42,9 @@ function ssh_alias() {
 
 alias ssh=ssh_alias
 
+# Git Aliases
+alias gitpf='git log --pretty=format:"%C(auto,red) %h %Creset %an %as %s"'
+
 #  #----------------------
 #  # PasteBins
 #  #----------------------
