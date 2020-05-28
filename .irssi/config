@@ -18,7 +18,7 @@ chatnets = {
   Freenode = {
     type = "IRC";
     nick = "locrian9";
-    autosendcmd = "/msg nickserv identify <PASSWORD>";
+    autosendcmd = "/msg nickserv identify qsiUGT7W";
   };
   Ubuntu = { type = "IRC"; };
 };
@@ -29,9 +29,9 @@ channels = (
   { name = "#debian"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#linux"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#vbox"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#docker"; chatnet = "freenode"; autojoin = "yes"; }
-  { name = "#chef"; chatnet = "freenode"; autojoin = "yes"; }
-  { name = "#jenkins"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#docker"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#chef"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#jenkins"; chatnet = "freenode"; autojoin = "yes"; },
 
 );
 
@@ -292,6 +292,9 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
+    autolog = "yes";
+    autolog_level = "ALL -CRAP -CLIENTCRAP -CTCPS";
+    autolog_path = "/var/log/irclogs/%Y/$tag/$0.%m-%d.log";
   };
 };
 ignores = ( { level = "JOINS PARTS QUITS"; } );
