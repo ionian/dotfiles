@@ -29,9 +29,10 @@ channels = (
   { name = "#debian"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#linux"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#vbox"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#docker"; chatnet = "freenode"; autojoin = "yes"; }
-  { name = "#chef"; chatnet = "freenode"; autojoin = "yes"; }
-  { name = "#jenkins"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#docker"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#chef"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#jenkins"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#git"; chatnet = "freenode"; autojoin = "yes"; },
 
 );
 
@@ -292,6 +293,8 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
+    autolog = "yes";
+    autolog_path = "~/irclogs/%Y/$tag/$0.%m-%d.log";
   };
 };
 ignores = ( { level = "JOINS PARTS QUITS"; } );
