@@ -27,12 +27,31 @@ chatnets = {
 channels = (
   { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#debian"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#linux"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#vbox"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#docker"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#chef"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#puppet"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#jenkins"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#mysql"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#nginx"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#git"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#python"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#perl"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#clojure"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#haskel"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "jquery"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#Node.js"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#angularjs"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#vim"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#bash"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "##networking"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "##cisco"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "##security"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "##electronics"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#go-nuts"; chatnet = "freenode"; autojoin = "yes"; },
 
 );
 
@@ -294,7 +313,7 @@ settings = {
   "fe-common/core" = {
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
     autolog = "yes";
-    autolog_path = "~/irclogs/%Y/$tag/$0.%m-%d.log";
+    autolog_path = "/var/log/irclogs/%Y/$tag/$0.%m-%d.log";
   };
 };
 ignores = ( { level = "JOINS PARTS QUITS"; } );
@@ -302,3 +321,4 @@ keyboard = (
   { key = "^j"; id = "scroll_backward"; data = ""; },
   { key = "^k"; id = "scroll_forward"; data = ""; }
 );
+logs = { };
