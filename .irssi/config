@@ -21,7 +21,7 @@ chatnets = {
   liberachat = {
     type = "IRC";
     nick = "locrian9";
-    autosendcmd = "/msg NickServ IDENTIFY $$sS0b9I2C&jJ;wait 6000" liberachat;
+    autosendcmd = "/msg NickServ IDENTIFY IRSSI_PASS;wait 6000" liberachat;
   };
 };
 
