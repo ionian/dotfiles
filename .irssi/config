@@ -1,13 +1,11 @@
 servers = (
-  { address = "irc.ubuntu.com"; chatnet = "Ubuntu"; port = "8001"; },
-  #There is actually very little difference between irc.ubuntu.com
-  # and irc.freenode.net - irc.u.c is just a redirect
   {
-    address = "irc.freenode.net";
-    chatnet = "Freenode";
-    port = "6667";
-    use_ssl = "no";
-    ssl_verify = "no";
+    address = "irc.libera.chat";
+    chatnet = "liberachat";
+    port = "6697";
+    use_tls = "yes";
+    tls_verify = "yes";
+    tls_capath = "/etc/ssl/certs";
     autoconnect = "yes";
   }
 );
@@ -15,43 +13,47 @@ servers = (
 
 # I'm a freenode user all the way man
 chatnets = {
-  Freenode = {
+  sasl_password = {
+    type = "IRC";
+    sasl_mechanism = "plain";
+    sasl_username = "locrian9";
+  };
+  liberachat = {
     type = "IRC";
     nick = "locrian9";
-    autosendcmd = "/msg nickserv identify <PASSWORD>";
+    autosendcmd = "/msg NickServ IDENTIFY $$sS0b9I2C&jJ;wait 6000" liberachat;
   };
-  Ubuntu = { type = "IRC"; };
 };
 
 # Channels I hang out in a lot.  Change these to your own.
 channels = (
-  { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#debian"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#ubuntu"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#linux"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#vbox"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#docker"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#chef"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#puppet"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#jenkins"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#mysql"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#nginx"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#git"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#python"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#perl"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#clojure"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#haskel"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "jquery"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#Node.js"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#angularjs"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#vim"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#bash"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "##networking"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "##cisco"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "##security"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "##electronics"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#go-nuts"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#archlinux"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#debian"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#ubuntu"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#linux"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#digitalocean"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#vbox"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#docker"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#chef"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#puppet"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#jenkins"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#mysql"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#nginx"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#git"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#python"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#perl"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#clojure"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#haskel"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "jquery"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#Node.js"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#angularjs"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#vim"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#bash"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "##networking"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "##cisco"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "##security"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "##electronics"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#go-nuts"; chatnet = "liberachat"; autojoin = "yes"; },
 
 );
 
