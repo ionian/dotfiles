@@ -78,7 +78,7 @@ xset fp rehash
      # launch VBoxClient
      /usr/bin/VBoxClient-all &
      # launch dwm
-     exec $HOME/scripts/dwm-start
+     exec $HOME/scripts/dwm-start-jr
 #
 #
 # w0ng .xinitrc
