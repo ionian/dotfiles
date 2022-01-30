@@ -28,6 +28,11 @@ alias ls="ls --color=auto"
 #  # Program Start Aliases
 #  #----------------------
 
+<<<<<<< Updated upstream
+=======
+alias yt='ytfzf --subs=50'
+
+>>>>>>> Stashed changes
 #  #----------------------
 #  # Program Start Functions
 #  #----------------------
