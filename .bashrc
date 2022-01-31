@@ -63,17 +63,10 @@ alias gitpf='git log --pretty=format:"%C(auto,red) %h %Creset %an %as %s"'
 #  # PasteBins
 #  #----------------------
 
-pb () {
-  curl -F'file=@yourfile.png' https://0x0.st
-}
-
+#0x0 pastebin function -- currently possible ban on my IP address.  If want to reinitialize, send mail to 'mim@0x0.st' to lift ban
 pb () {
   curl -F'file=@${1:--}' https://0x0.st
 }
-
-#pb () {
-#  curl -F "c=@${1:--}" http://54.86.15.147
-#}
 
 #ix pastebin function
 ix() {
