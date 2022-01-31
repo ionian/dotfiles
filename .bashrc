@@ -29,6 +29,8 @@ alias ls="ls --color=auto"
 #  #----------------------
 
 alias yt='ytfzf --subs=50'
+alias mpv="devour mpv"
+alias mpv="devour sxiv"
 
 #  #----------------------
 #  # Program Start Functions
