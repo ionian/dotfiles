@@ -1,0 +1,1 @@
+autosendcmd = "/msg nickserv identify PASSWORD_NICK_NAME_HERE ;wait 2000";
