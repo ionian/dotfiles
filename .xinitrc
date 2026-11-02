@@ -40,6 +40,9 @@
 #     # compose key
      setxkbmap -option compose:ralt
 
+#     # key autorepeat delay and repeat rate
+     xset r rate 250 25 &
+
  # add font paths
 xset fp default
 # [[ -d /usr/share/fonts/local ]] && xset +fp /usr/share/fonts/local
@@ -78,7 +81,7 @@ xset fp rehash
      # launch VBoxClient
      /usr/bin/VBoxClient-all &
      # launch dwm
-     exec $HOME/scripts/dwm-start-jr
+     exec $HOME/scripts/dwm-start
 #
 #
 # w0ng .xinitrc
