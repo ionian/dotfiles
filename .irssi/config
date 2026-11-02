@@ -1,29 +1,65 @@
-servers = (
-  {
-    address = "irc.libera.chat";
-    chatnet = "liberachat";
-    port = "6697";
-    use_tls = "yes";
-    tls_verify = "yes";
-    tls_capath = "/etc/ssl/certs";
-    autoconnect = "yes";
-  }
-);
 
+#  {
+#    address = "irc.libera.chat";
+#    chatnet = "liberachat";
+#    port = "6697";
+#    use_tls = "yes";
+#    tls_verify = "yes";
+#    tls_capath = "/etc/ssl/certs";
+#    autoconnect = "yes";
+#  }
+#);
+#
+#
+## I'm a freenode user all the way man
+#chatnets = {
+#  sasl_password = {
+#    type = "IRC";
+#    sasl_mechanism = "plain";
+#    sasl_username = "locrian9";
+#  };
+#  liberachat = {
+#    type = "IRC";
+#    nick = "locrian9";
+#    autosendcmd = "/msg NickServ IDENTIFY $$sS0b9I2C&jJ; wait 6000 liberachat; /msg HostServ REQUEST my.vhost.here";
+#  };
+#};
 
-# I'm a freenode user all the way man
 chatnets = {
-  sasl_password = {
-    type = "IRC";
-    sasl_mechanism = "plain";
-    sasl_username = "locrian9";
-  };
-  liberachat = {
+   LiberaChat = {
+     type = "IRC";     
+     max_kicks = "4";     
+     max_msgs = "4";     
+     max_modes = "4";   
+   };
+}; 
+
+servers = ( 
+  { 
+    address = "irc.libera.chat";     
+    chatnet = "LiberaChat";     
+    port = "6697";     
+    use_ssl = "yes";     
+    ssl_verify = "yes";          
+
+# Enable automatic connection on startup     
+    autoconnect = "yes";          
+
+# SASL Configuration     
+    sasl_mechanism = "PLAIN";     
+    sasl_username = "locrian9";     
+    sasl_password = "$$sS0b9I2C&jJ";   
+  } 
+)
+
+
+liberachat = {
     type = "IRC";
     nick = "locrian9";
-    autosendcmd = "/msg NickServ IDENTIFY secrets.IRSSI_PASS;wait 6000" liberachat;
+    autosendcmd = "/msg NickServ IDENTIFY $$sS0b9I2C&jJ; wait 6000 liberachat; /msg HostServ REQUEST my.vhost.here";
   };
 };
+
 
 # Channels I hang out in a lot.  Change these to your own.
 channels = (
