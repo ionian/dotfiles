@@ -116,3 +116,5 @@ xset fp rehash
 #
 # # start WM
 # exec $HOME/Scripts/dwm-start
+
+# adding a line to check if Github is accepting my new PAT
