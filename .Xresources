@@ -204,8 +204,8 @@ URxvt*iso14755: False
 *color8:	#474747
 *color9:	#CF4F88
 URxvt.background:	#080808
-URxvt.boldFont:	xft:dejavu sans mono:medium:pixelsize=28,xft:unifont:medium
-URxvt.font:	xft:dejavu sans mono:medium:pixelsize=28,xft:unifont:medium
+URxvt.boldFont:	xft:dejavu sans mono:medium:pixelsize=12,xft:unifont:medium
+URxvt.font:	xft:dejavu sans mono:medium:pixelsize=12,xft:unifont:medium
 URxvt.foreground:	#999999
 URxvt.keysym.M-S-parenleft:	font-size:decsave
 URxvt.keysym.M-S-parenright:	font-size:incsave
