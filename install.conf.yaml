@@ -14,6 +14,7 @@
     ~/.gitignore: .gitignore
     ~/.gitmodules: .gitmodules
     ~/.irssi/config: .irssi/config
+    ~/.urxvt/ext/font-size: .urxvt/ext/font-size
     ~/.vimrc: .vimrc
     ~/.vim: .vim
     ~/.xinitrc: .xinitrc
