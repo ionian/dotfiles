@@ -112,7 +112,7 @@ export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/bash_history"
 PS1='[\u@\h \W]\$ '
 export EDITOR="vim"
 export VISUAL="$EDITOR"
-export PAGER="less -Rfx"
+export PAGER="less -RFX"
 
 #  #----------------------
 #  # Bash Setup
