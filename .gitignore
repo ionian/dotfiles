@@ -1,3 +1,40 @@
+# ============================================================================== 
+# GITIGNORE WHITELIST SYNTAX REFERENCE 
+# ============================================================================== 
+# 
+# HOW THIS WHITELIST WORKS: 
+#   1. `*` ignores every file and directory by default. 
+#   2. `!*/` un-ignores directories ONLY (trailing `/` = folder). Git will not 
+#      look inside an ignored directory for whitelisted files unless that 
+#      directory is un-ignored first. 
+#   3. `pkg/` and `src/` re-ignore makepkg build folders so Git never descends 
+#      into them to match copied PKGBUILD, .install, or .desktop files. 
+#   4. Rules are evaluated top-to-bottom; the LAST matching rule wins. 
+#   5. Already-tracked files ignore these rules until removed from the index 
+#      with: `git rm -rf --cached <path>` 
+# 
+# WHITELIST PATTERN EXAMPLES: 
+#   !filename              -> Track exact filename anywhere in the repo 
+#   !*.ext                 -> Track all files with extension anywhere in repo 
+#   !dir/filename          -> Track one specific file inside `dir/` 
+#   !dir/*.c               -> Track all `.c` files directly inside `dir/` 
+#   !dir/**                -> Track ALL files and subfolders inside `dir/` 
+# 
+# WILDCARD QUICK REFERENCE: 
+#   *   = Matches anything EXCEPT a slash `/` (single folder level only) 
+#   **  = Matches across multiple directory levels recursively 
+#   /   = At the start: anchors to repo root. At the end: matches directories only 
+#   !   = Negates (un-ignores) a previously ignored pattern 
+# ============================================================================== 
+
+# 1. Ignore everything by default 
+* 
+
+# 2. Allow Git to traverse subdirectories (required for subfolder whitelists) 
+!*/ 
+
+# 3. Block any logs that are burried in some of these config files
+
 # Ignore everything
 *
 .vim/.netrwhist
@@ -26,7 +63,7 @@
 !.irssi/*
 !.dir_colors
 !.fonts
-!.config
+!.config/*/*/*/*/*
 !.colors
 !.colors/*
 !.colors/*/*
