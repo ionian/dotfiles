@@ -47,7 +47,7 @@ alias mpv="devour sxiv"
 alias anki="anki --base=${HOME}/pgms/anki/Documents/Anki"
 
 alias ls='ls --color=auto'
-alias ll='ls -AFlh --group-directories-first --time-style="+%Y-%m-%d %H:%M:%S"'
+alias ll='ls -AFl --group-directories-first --time-style="+%Y-%m-%d %H:%M:%S"'
 
 function ssh_alias() {
     ssh $@;
@@ -100,6 +100,7 @@ ix() {
 export HISTTIMEFORMAT="%h %d %H:%M:%S "
 export HISTSIZE=10000
 export HISTFILESIZE=10000
+export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/bash_history" 
 
   #----------------------
 #  # Global Variables
