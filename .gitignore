@@ -69,3 +69,6 @@
 !.colors/*/*
 !.colors/*/*
 !.urxvt/*/*
+
+!test1
+!testfolder/*/*
