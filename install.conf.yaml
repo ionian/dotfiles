@@ -8,6 +8,8 @@
 - link:
     ~/.Xresources: .Xresources
     ~/.bashrc: .bashrc
+    ~/.bash_profile: .bash_profile 
+    ~/.bash_logout: .bash_logout     
     ~/.colors: .colors
     ~/.dir_colors: .dir_colors
     ~/.gitconfig: .gitconfig
