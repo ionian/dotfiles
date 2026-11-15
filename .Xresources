@@ -41,7 +41,7 @@ URxvt*boldFont:	xft:dejavu sans mono:medium:pixelsize=12, xft:unifont:medium
 !!URxvt*boldFont:xft:luxi mono:regular:pixelsize=16
 
 ! -- Colours -- !
-#include "/home/mike/.colors/dark"
+#include ".colors/dark"
 
 ! --  Urxvt Extensions -- !
 URxvt.perl-ext-common:      default,matcher,selection-to-clipboard,font-size
