@@ -107,7 +107,10 @@ export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/bash_history"
 #  #----------------------
 
 # To setup global variables at startup, insert here:
-
+for dir in "$HOME/.local/bin" "$HOME/bin"; do     
+    if [ -d "$dir" ] && [[ ":$PATH:" != *":$dir:"* ]]; then         
+    export PATH="$dir:$PATH"     
+    fi done 
 
 PS1='[\u@\h \W]\$ '
 export EDITOR="vim"
