@@ -46,6 +46,8 @@
 # But not these files/directories...
 !.gitignore
 !dotbot
+!.dotfilters.yaml
+!.gitattributes
 !install.conf.yaml
 !install
 !.xinitrc
