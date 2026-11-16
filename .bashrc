@@ -14,7 +14,7 @@ function my_ip() # Get IP adress on ethernet.
 
 # colour coreutils
 eval $(dircolors -b ~/.dir_colors)
-export GREP_COLOR="1;31"
+export GREP_COLOR="mt=1;31"
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
              
