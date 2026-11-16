@@ -18,3 +18,11 @@ filters:
         description: NickServ IDENTIFY password 
         regex: (/msg\s+NickServ\s+IDENTIFY\s+)([^;\s"]+) 
         substitute: \1(?#Key) 
+      sasl_username:
+        description: IRC SASL username
+        regex: sasl_username(\s*)=(\s*)(?#QuotedString);
+        substitute: sasl_username\1=\2"(?#Key)";
+      sasl_password:
+        description: IRC SASL password
+        regex: sasl_password(\s*)=(\s*)(?#QuotedString);
+        substitute: sasl_password\1=\2"(?#Key)";
