@@ -1,1 +1,2 @@
-* filter=dotsecrets
+# IRC credentials
+.irssi/config filter=dotsecrets
