@@ -17,6 +17,9 @@ eval $(dircolors -b ~/.dir_colors)
 export GREP_COLOR="mt=1;31"
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
+
+# color hex print
+
              
 #============================================================
 #
@@ -116,6 +119,7 @@ PS1='[\u@\h \W]\$ '
 export EDITOR="vim"
 export VISUAL="$EDITOR"
 export PAGER="less -RFX"
+export PATH="$HOME/scripts:$PATH"
 
 #  #----------------------
 #  # Bash Setup
@@ -125,3 +129,4 @@ export PAGER="less -RFX"
 
 
 set -o vi
+colorscript random
