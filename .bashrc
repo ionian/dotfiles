@@ -16,7 +16,6 @@ function my_ip() # Get IP adress on ethernet.
 eval $(dircolors -b ~/.dir_colors)
 export GREP_COLOR="mt=1;31"
 alias grep="grep --color=auto"
-alias ls="ls --color=auto"
 
 # color hex print
 
@@ -49,8 +48,6 @@ alias mpv="devour sxiv"
 
 alias anki="anki --base=${HOME}/pgms/anki/Documents/Anki"
 
-alias ls='ls --color=auto'
-alias ll='ls -AFl --group-directories-first --time-style="+%Y-%m-%d %H:%M:%S"'
 
 function ssh_alias() {
     ssh $@;
@@ -115,7 +112,24 @@ for dir in "$HOME/.local/bin" "$HOME/bin"; do
     export PATH="$dir:$PATH"     
     fi done 
 
-PS1='[\u@\h \W]\$ '
+#  #----------------------
+#  # Terminal Prompt
+#  #----------------------
+#PS1='[\u@\h \W]\$ '
+set_gradient_prompt() {
+  local dir="${PWD/#$HOME/\~}"
+  local raw="[${USER}@${HOSTNAME%%.*} ${dir}]\$ "
+
+  # Solid #395573 blue (slot 4) with low-white text (slot 252) across the entire path
+  local main="\[\033[48;5;4m\033[38;5;252m\]${raw}"
+
+  # Compact 4-column fade tail (slot 4 -> slot 60 -> slot 237)
+  local tail="\[\033[48;5;60m\033[38;5;4m\]▓░\[\033[48;5;237m\033[38;5;60m\]▓░"
+
+  PS1="${main}${tail}\[\033[0m\] "
+}
+PROMPT_COMMAND=set_gradient_prompt
+
 export EDITOR="vim"
 export VISUAL="$EDITOR"
 export PAGER="less -RFX"
@@ -130,3 +144,67 @@ export PATH="$HOME/scripts:$PATH"
 
 set -o vi
 colorscript random
+
+# Colorized ls -l permission triads (User, Group, Others)
+ls() {
+  local has_l=0 arg
+  for arg in "$@"; do
+    case "$arg" in
+      --format=long|--format=verbose) has_l=1 ;;
+      --*) ;;
+      -*l*) has_l=1 ;;
+    esac
+  done
+
+  # Bypass awk if piped/redirected or if -l flag isn't present
+  if [[ ! -t 1 ]] || [[ $has_l -eq 0 ]]; then
+    command ls --color=auto "$@"
+    return
+  fi
+
+  command ls --color=always "$@" | awk '
+  function color_triad(str, col,    gray, out, i, c) {
+    gray = "\033[38;5;245m"   # Light gray for dashes (-)
+    out = ""
+    for (i = 1; i <= length(str); i++) {
+      c = substr(str, i, 1)
+      if (c == "-") {
+        out = out gray c
+      } else {
+        out = out col c
+      }
+    }
+    return out "\033[0m"
+  }
+
+  /^total / { print; next }
+  {
+    type  = substr($0, 1, 1)    # File type (d, l, -, etc.)
+    user  = substr($0, 2, 3)    # User triad
+    group = substr($0, 5, 3)    # Group triad
+    other = substr($0, 8, 3)    # Others triad
+    rest  = substr($0, 11)      # Links, owner, group, size, date, filename
+
+    c_blue   = "\033[38;5;117m" # Light blue (directories)
+    c_yellow = "\033[38;5;229m" # Light yellow (links)
+    c_gray   = "\033[38;5;245m" # Light gray (dashes)
+    c_green  = "\033[38;5;120m" # Light green (User)
+    c_purple = "\033[38;5;183m" # Light purple (Group)
+    c_pink   = "\033[38;5;218m" # Light pink (Others)
+    reset    = "\033[0m"
+
+    if (type == "d")      type_str = c_blue type reset
+    else if (type == "l") type_str = c_yellow type reset
+    else if (type == "-") type_str = c_gray type reset
+    else                  type_str = type
+
+    u_str = color_triad(user, c_green)
+    g_str = color_triad(group, c_purple)
+    o_str = color_triad(other, c_pink)
+
+    printf "%s %s %s %s%s\n", type_str, u_str, g_str, o_str, rest
+  }'
+}
+
+alias ll='ls -hAFl --group-directories-first --time-style="+%Y-%m-%d %H:%M:%S"'
+
